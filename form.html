@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Central Coffee - Reserva</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">CENTRAL <span class="brand-dot">•</span> COFFEE</div>
+    <nav>
+      <a href="index.html">🏠 Início</a>
+      <a href="form.html" class="active">☕ Reserva</a>
+      <a href="index.html#cardapio">🍪 Cardápio</a>
+      <a href="about.html">📺 Sobre</a>
+      <a href="index.html#contato">📞 Contato</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="form-section">
+      <h1>Aquele em que você reserva sua mesa</h1>
+      <p class="form-intro">
+        Preencha os dados abaixo para garantir sua experiência na Central Coffee.
+        Após enviar o formulário, sua reserva será confirmada e você verá um resumo com todos os detalhes.
+      </p>
+
+      <button class="btn-secondary btn-close" onclick="window.close()">Fechar página</button>
+
+      <form id="reserva-form" class="card" method="GET" action="formAction.html">
+        <div class="field">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Rachel Green" required minlength="3" />
+          <small class="error" data-for="nome"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required />
+          <small class="error" data-for="email"></small>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="data">Data da visita *</label>
+            <input type="date" id="data" name="data" required />
+            <small class="error" data-for="data"></small>
+          </div>
+          <div class="field">
+            <label for="hora">Horário *</label>
+            <input type="time" id="hora" name="hora" required />
+            <small class="error" data-for="hora"></small>
+          </div>
+          <div class="field">
+            <label for="pessoas">Número de pessoas *</label>
+            <input type="number" id="pessoas" name="pessoas" min="1" max="10" placeholder="Ex.: 4" required />
+            <small class="error" data-for="pessoas"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="assento">Preferência de assento *</label>
+          <select id="assento" name="assento" required>
+            <option value="">Selecione...</option>
+            <option>Sofá central (estilo Friends)</option>
+            <option>Mesas próximas ao balcão</option>
+            <option>Poltronas mais silenciosas</option>
+          </select>
+          <small class="error" data-for="assento"></small>
+        </div>
+
+        <div class="field">
+          <label for="episodio">Seu episódio preferido (opcional)</label>
+          <input type="text" id="episodio" name="episodio" placeholder="Ex.: Aquele do..." />
+        </div>
+
+        <div class="field">
+          <label for="obs">Observações (opcional)</label>
+          <textarea id="obs" name="obs" rows="3"
+            placeholder="Ex.: Aniversário, pedido especial, alergias..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Enviar reserva</button>
+          <button type="reset" class="btn-secondary">Limpar campos</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Central Coffee • Est. 1994 • Reservas sujeitas à disponibilidade.
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>

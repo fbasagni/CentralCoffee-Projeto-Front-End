@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Central Coffee - Reserva confirmada</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">CENTRAL <span class="brand-dot">•</span> COFFEE</div>
+    <nav>
+      <a href="index.html">🏠 Início</a>
+      <a href="form.html" class="active">☕ Reserva</a>
+      <a href="index.html#cardapio">🍪 Cardápio</a>
+      <a href="about.html">📺 Sobre</a>
+      <a href="index.html#contato">📞 Contato</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card confirm-card">
+      <h1>Reserva confirmada! ✅</h1>
+      <p id="mensagem-amigavel"></p>
+
+      <h2>Resumo da sua reserva</h2>
+      <ul class="confirm-list">
+        <li><strong>Nome:</strong> <span id="conf-nome"></span></li>
+        <li><strong>E-mail:</strong> <span id="conf-email"></span></li>
+        <li><strong>Data:</strong> <span id="conf-data"></span></li>
+        <li><strong>Horário:</strong> <span id="conf-hora"></span></li>
+        <li><strong>Pessoas:</strong> <span id="conf-pessoas"></span></li>
+        <li><strong>Assento:</strong> <span id="conf-assento"></span></li>
+        <li><strong>Episódio preferido:</strong> <span id="conf-episodio"></span></li>
+        <li><strong>Observações:</strong> <span id="conf-obs"></span></li>
+      </ul>
+
+      <p class="confirm-extra">
+        Seu café com os amigos já está reservado.
+        Em um cenário real, você receberia um código de confirmação no seu e-mail. ☕💛
+      </p>
+
+      <a href="index.html" class="btn-primary">Voltar para a página inicial</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Central Coffee • Est. 1994 • Te esperamos para o próximo episódio.
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>
